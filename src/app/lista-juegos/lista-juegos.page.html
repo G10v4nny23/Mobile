@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Juegos</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title  *ngFor="let label of Juego1">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://cdn-products.eneba.com/resized-products/bDPDJb0imXH25PdZK7aE_cv_pvE2HLm-rnLnnJ9ycTA_350x200_1x-0.jpeg" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Juego1">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo:{{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title *ngFor="let label of Juego2">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://cdn-products.eneba.com/resized-products/e4f9bbdc85d516e5d2a5151d8d45c98f_350x200_1x-0.jpg" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Juego2">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo: {{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title *ngFor="let label of Juego3">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://cdn-products.eneba.com/resized-products/31UnRmj0GhGaHc1Xr0Dy23g9IrfuiI5kZ7EO3mf7avs_350x200_1x-0.jpeg" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Juego3">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo: {{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>    
+  </div>
+</ion-content>
+
+

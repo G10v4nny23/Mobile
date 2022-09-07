@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+    <ion-title>Audio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title *ngFor="let label of Audio1">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://f8f7j6u2.rocketcdn.me/wp-content/uploads/2022/09/capa-1-2932c1f8-aafa-4a18-8a54-259b0fcef28a.png" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Audio1">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo: {{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title *ngFor="let label of Audio2">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://f8f7j6u2.rocketcdn.me/wp-content/uploads/2022/07/capa-3-ef211c96-1867-4705-8ab9-1ea6455c91c9-300x300.png" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Audio2">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo: {{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        
+        <ion-card-title *ngFor="let label of Audio3">{{label.nombre}}</ion-card-title>
+        <br>
+        <img src="https://f8f7j6u2.rocketcdn.me/wp-content/uploads/2021/05/2-13-16a6e897-8656-4d38-865d-a819d0190d58-300x300.jpg" alt="" style="width: 10em;">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list *ngFor="let label of Audio3">
+          <li> Precio:{{label.precio}}</li>
+          <li> Tipo: {{label.tipo}}</li>
+        </ion-list>
+        <ion-button>Comprar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    
+  </div>
+</ion-content>

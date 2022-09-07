@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title><ion-list-header>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Ingrese Nombre</ion-label>   
+          <ion-input type="text" [(ngModel)]="nombre"></ion-input> 
+        </ion-item>
+      </ion-list>
+    </ion-list-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <img src="https://w.wallhaven.cc/full/01/wallhaven-01lgzg.png" alt="">
+
+    <ion-text>
+      <h1> Sobre Nosotros </h1>
+
+      <p style="color: white;">Nuestro objetivo es ofrecer al mercado productos de alta calidad con una política de precios razonables. Queremos ser tu aliado perfecto en el campo de batalla, cuando necesites sillas, periféricos, equipación o accesorios, ¡cuenta con nuestras armas! Por supuesto, con RGB que da un estilo extra.
+      </p>
+    </ion-text>
+    <br><br>
+    <ion-label style="color: green;">{{nombre || 'No hay nombre'}}</ion-label>
+  </div>
+  
+</ion-content>
